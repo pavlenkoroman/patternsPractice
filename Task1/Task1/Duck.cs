@@ -11,14 +11,12 @@ namespace Task1
         private protected IFlyBehavior _flyBehavior;
         private protected IQuackBehavior _quackBehavior;
         private protected ISwimable _swimable;
-        private protected IDead _dead;
 
-        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, ISwimable swimable, IDead dead)
+        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, ISwimable swimable)
         {
             _flyBehavior = flyBehavior;
             _quackBehavior = quackBehavior;
             _swimable = swimable;
-            _dead = dead;
         }
         public void Display() 
         {
@@ -27,22 +25,29 @@ namespace Task1
             _swimable.Swim();
         }
 
+        public void Fly()
+        {
+            _flyBehavior.Fly();
+        }
+
+        public void Quack()
+        {
+            _quackBehavior.Quack();
+        }
+
+        public void Swim()
+        {
+            _swimable.Swim();
+        }
+
         public void Dead()
         {
-            if(_dead is CanDie)
-            {
                 CanDie canDie = new CanDie();
                 canDie.Dead();
 
                 _flyBehavior = new NoFly();
                 _quackBehavior = new NoQuack();
                 _swimable = new NotSwimable();
-            }
-            else
-            {
-                CannotDie cannotDie = new CannotDie();
-                cannotDie.Dead();
-            }
         }
     }
 }

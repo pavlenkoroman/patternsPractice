@@ -9,7 +9,7 @@ namespace Task1
     class RubberDuck : Duck
     {
         public RubberDuck()
-            :base(new NoFly(), new RubberDuckQuack(), new Swimable(), new CannotDie())
+            :base(new NoFly(), new RubberDuckQuack(), new Swimable())
         { }
     }
 }

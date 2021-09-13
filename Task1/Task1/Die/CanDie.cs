@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task1.Die
 {
-    class CanDie : IDead
+    class CanDie
     {
         public void Dead()
         {

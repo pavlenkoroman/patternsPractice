@@ -29,7 +29,9 @@ namespace Task1
 
             Console.WriteLine("Попытка убить живую уточку:");
             mallardDuck.Dead();
-            mallardDuck.Display();
+            mallardDuck.Fly();
+            mallardDuck.Quack();
+            mallardDuck.Swim();
         }
     }
 }

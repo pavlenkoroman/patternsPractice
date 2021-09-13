@@ -9,7 +9,7 @@ namespace Task1
     class WoodDuck : Duck
     {
         public WoodDuck()
-            :base(new NoFly(), new NoQuack(), new NotSwimable(), new CannotDie())
+            :base(new NoFly(), new NoQuack(), new NotSwimable())
         { }
     }
 }
