@@ -22,6 +22,14 @@ namespace Task1
             Console.WriteLine("Деревянная уточка:");
             woodDuck.Display();
             Console.WriteLine("-----------------------------");
+
+            Console.WriteLine("Попытка убить неубиваемую уточку:");
+            rubberDuck.Dead();
+            Console.WriteLine("-----------------------------");
+
+            Console.WriteLine("Попытка убить живую уточку:");
+            mallardDuck.Dead();
+            mallardDuck.Display();
         }
     }
 }

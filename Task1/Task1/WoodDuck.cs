@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Task1.Die;
 using Task1.Swim;
 
 namespace Task1
@@ -8,10 +9,7 @@ namespace Task1
     class WoodDuck : Duck
     {
         public WoodDuck()
-        {
-            _flyBehavior = new NoFly();
-            _quackBehavior = new NoQuack();
-            _swimable = new NotSwimable();
-        }
+            :base(new NoFly(), new NoQuack(), new NotSwimable(), new CannotDie())
+        { }
     }
 }
