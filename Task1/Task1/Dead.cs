@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task1.Die
+namespace Task1
 {
-    class CanDie
+    class Dead
     {
-        public void Dead()
+        public void Kill()
         {
             Console.WriteLine("Существо умерло");
         }

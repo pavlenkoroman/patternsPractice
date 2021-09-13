@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task1.Die;
 using Task1.Swim;
 
 namespace Task1
@@ -42,8 +41,8 @@ namespace Task1
 
         public void Dead()
         {
-                CanDie canDie = new CanDie();
-                canDie.Dead();
+                Dead dead = new Dead();
+                dead.Kill();
 
                 _flyBehavior = new NoFly();
                 _quackBehavior = new NoQuack();
