@@ -41,9 +41,7 @@ namespace Task1
 
         public void Dead()
         {
-                Dead dead = new Dead();
-                dead.Kill();
-
+                Console.WriteLine("Уточка мертва");
                 _flyBehavior = new NoFly();
                 _quackBehavior = new NoQuack();
                 _swimable = new NotSwimable();
