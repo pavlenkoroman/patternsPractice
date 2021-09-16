@@ -10,5 +10,11 @@ namespace Task1
         public WoodDuck()
             :base(new NoFly(), new NoQuack(), new NotSwimable())
         { }
+
+        public override void Display()
+        {
+            Console.WriteLine("Wood duck");
+            base.Display();
+        }
     }
 }

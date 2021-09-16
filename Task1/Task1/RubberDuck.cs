@@ -10,5 +10,11 @@ namespace Task1
         public RubberDuck()
             :base(new NoFly(), new RubberDuckQuack(), new Swimable())
         { }
+
+        public override void Display()
+        {
+            Console.WriteLine("Rubber duck:");
+            base.Display();
+        }
     }
 }

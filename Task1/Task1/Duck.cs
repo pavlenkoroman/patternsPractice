@@ -17,7 +17,7 @@ namespace Task1
             _quackBehavior = quackBehavior;
             _swimable = swimable;
         }
-        public void Display() 
+        public virtual void Display() 
         {
             _flyBehavior.Fly();
             _quackBehavior.Quack();

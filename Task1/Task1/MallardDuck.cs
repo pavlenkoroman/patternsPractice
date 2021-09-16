@@ -8,7 +8,12 @@ namespace Task1
     class MallardDuck : Duck
     {
         public MallardDuck()
-            :base(new FlyingWithWings(), new DuckQuack(), new Swimable())
+            : base(new FlyingWithWings(), new DuckQuack(), new Swimable())
         { }
+        public override void Display()
+        {
+            Console.WriteLine("Mallard Duck:");
+            base.Display();
+        }
     }
 }
