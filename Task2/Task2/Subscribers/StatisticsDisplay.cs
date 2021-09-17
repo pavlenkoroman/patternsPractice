@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Task2.Subscribers
@@ -23,13 +24,9 @@ namespace Task2.Subscribers
 
         private static double FindAverage(List<double> data) 
         {
-            double sum = 0;
-            foreach (var item in data)
-            {
-                sum += item;
-            }
-
-            return sum / data.Count;
+            double avg;
+            avg = data.Average();
+            return avg;
         }
     }
 }

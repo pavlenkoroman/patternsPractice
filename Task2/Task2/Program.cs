@@ -10,10 +10,10 @@ namespace Task2
         {
             CurrentDisplay display1 = new CurrentDisplay();
             StatisticsDisplay display2 = new StatisticsDisplay();
-            WeatherData weatherData = new WeatherData();
+            EventWeatherData weatherData = new EventWeatherData();
             weatherData.AddSubscriber(display1);
             weatherData.AddSubscriber(display2);
-            weatherData.Notify();
+            weatherData.NotifySubscribers();
         }
     }
 }
