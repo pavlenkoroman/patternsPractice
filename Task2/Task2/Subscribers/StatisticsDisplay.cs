@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Task2.Publisher;
 
 namespace Task2.Subscribers
 {
     public class StatisticsDisplay : ISubscriber
     {
+        public StatisticsDisplay() { }
+        public StatisticsDisplay(IPublisher publisher)
+        {
+            publisher.AddSubscriber(new StatisticsDisplay());
+        }
+
         private static List<double> tempList = new List<double>() { 22, 38, 25 };
         private static List<double> humidityList = new List<double>() { 30, 44, 55, 29 };
         private static List<double> pressureList = new List<double>() { 632, 711, 703, 801 };
+
         public void GetNotify(double temp, double pressure, double humidity)
         {
             tempList.Add(temp);

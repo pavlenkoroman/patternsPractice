@@ -8,12 +8,10 @@ namespace Task2
     {
         static void Main()
         {
-            CurrentDisplay display1 = new CurrentDisplay();
-            StatisticsDisplay display2 = new StatisticsDisplay();
-            EventWeatherData weatherData = new EventWeatherData();
-            weatherData.AddSubscriber(display1);
-            weatherData.AddSubscriber(display2);
-            weatherData.NotifySubscribers();
+            EventWeatherData eventWeatherData = new EventWeatherData();
+            CurrentDisplay display1 = new CurrentDisplay(eventWeatherData);
+            StatisticsDisplay display2 = new StatisticsDisplay(eventWeatherData);
+            eventWeatherData.NotifySubs();
         }
     }
 }

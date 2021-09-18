@@ -10,22 +10,20 @@ namespace Task2.Publisher
     {
         Random rand = new Random();
 
-        event WeatherPublisherHandler Notify;
+        public event WeatherPublisherHandler Notify;
         public void AddSubscriber(ISubscriber sub)
         {
             Notify += sub.GetNotify;
         }
-
         public void DeleteSubscriber(ISubscriber sub)
         {
             Notify -= sub.GetNotify;
         }
 
-        public void NotifySubscribers()
+        public void NotifySubs()
         {
             Notify.Invoke(GetTemperature(), GetPressure(), GetHumidity());
         }
-
         public double GetTemperature()
         {
             double t = rand.Next(0, 40);
