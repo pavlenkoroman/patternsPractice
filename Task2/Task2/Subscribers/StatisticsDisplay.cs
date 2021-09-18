@@ -8,10 +8,9 @@ namespace Task2.Subscribers
 {
     public class StatisticsDisplay : ISubscriber
     {
-        public StatisticsDisplay() { }
         public StatisticsDisplay(IPublisher publisher)
         {
-            publisher.AddSubscriber(new StatisticsDisplay());
+            publisher.AddSubscriber(this);
         }
 
         private static List<double> tempList = new List<double>() { 22, 38, 25 };

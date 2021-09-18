@@ -9,10 +9,9 @@ namespace Task2.Subscribers
 {
     public class CurrentDisplay : ISubscriber
     {
-        public CurrentDisplay() { }
         public CurrentDisplay(IPublisher publisher)
         {
-            publisher.AddSubscriber(new CurrentDisplay());
+            publisher.AddSubscriber(this);
         }
         
         public void GetNotify(double t, double p, double h)
