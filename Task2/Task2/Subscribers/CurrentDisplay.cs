@@ -11,9 +11,9 @@ namespace Task2.Subscribers
     {
         public CurrentDisplay(IPublisher publisher)
         {
-            publisher.AddSubscriber(this);
+            publisher.Notify += this.GetNotify;
         }
-        
+
         public void GetNotify(double t, double p, double h)
         {
             Console.WriteLine("-----АКТУАЛЬНАЯ ИНФОРМАЦИЯ:-----");

@@ -10,12 +10,12 @@ namespace Task2.Subscribers
     {
         public StatisticsDisplay(IPublisher publisher)
         {
-            publisher.AddSubscriber(this);
+            publisher.Notify += this.GetNotify;
         }
 
-        private static List<double> tempList = new List<double>() { 22, 38, 25 };
-        private static List<double> humidityList = new List<double>() { 30, 44, 55, 29 };
-        private static List<double> pressureList = new List<double>() { 632, 711, 703, 801 };
+        private static readonly List<double> tempList = new List<double>() { 22, 38, 25 };
+        private static readonly List<double> humidityList = new List<double>() { 30, 44, 55, 29 };
+        private static readonly List<double> pressureList = new List<double>() { 632, 711, 703, 801 };
 
         public void GetNotify(double temp, double pressure, double humidity)
         {
@@ -29,7 +29,7 @@ namespace Task2.Subscribers
             Console.WriteLine($"Средняя влажность воздуха: {FindAverage(humidityList)} %");
         }
 
-        private static double FindAverage(List<double> data) 
+        private static double FindAverage(List<double> data)
         {
             double avg;
             avg = data.Average();

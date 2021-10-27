@@ -8,22 +8,15 @@ namespace Task2.Publisher
     public delegate void WeatherPublisherHandler(double temp, double humidity, double pressure);
     class EventWeatherData : IPublisher
     {
-        Random rand = new Random();
+        private readonly Random rand = new Random();
 
         public event WeatherPublisherHandler Notify;
-        public void AddSubscriber(ISubscriber sub)
-        {
-            Notify += sub.GetNotify;
-        }
-        public void DeleteSubscriber(ISubscriber sub)
-        {
-            Notify -= sub.GetNotify;
-        }
 
         public void NotifySubs()
         {
             Notify.Invoke(GetTemperature(), GetPressure(), GetHumidity());
         }
+
         public double GetTemperature()
         {
             double t = rand.Next(0, 40);
@@ -41,7 +34,5 @@ namespace Task2.Publisher
             double h = rand.Next(30, 60); // средняя влажность воздуха в процентах
             return h;
         }
-
-
     }
 }
