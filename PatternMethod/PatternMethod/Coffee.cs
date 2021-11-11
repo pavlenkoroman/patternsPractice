@@ -4,6 +4,11 @@ namespace PatternMethod
 {
     public class Coffee : CaffeineBeverage
     {
+        public bool UserAnswer { get; set; }
+        public Coffee(bool answer)
+        {
+            UserAnswer = answer;
+        }
         protected override void Brew()
         {
             Console.WriteLine("Завариваем кофе...");
@@ -16,9 +21,7 @@ namespace PatternMethod
 
         protected override bool CustomerWantsCondiments()
         {
-            Console.WriteLine("Добавить молока?");
-            string answer = Console.ReadLine();
-            if (answer.ToUpper().StartsWith("Д"))
+            if (UserAnswer)
             {
                 return true;
             }

@@ -27,6 +27,10 @@ namespace PatternMethod
             }
         }
         protected abstract void AddCondiments();
-        protected abstract bool CustomerWantsCondiments();
+
+        protected virtual bool CustomerWantsCondiments()
+        {
+            return true;
+        }
     }
 }

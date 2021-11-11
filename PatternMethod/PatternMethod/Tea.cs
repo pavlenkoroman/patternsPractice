@@ -12,19 +12,5 @@ namespace PatternMethod
         {
             Console.WriteLine("Добавляем сахар...");
         }
-
-        protected override bool CustomerWantsCondiments()
-        {
-            Console.WriteLine("Добавить сахар?");
-            string answer = Console.ReadLine();
-            if (answer.ToUpper().StartsWith("Д"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }
