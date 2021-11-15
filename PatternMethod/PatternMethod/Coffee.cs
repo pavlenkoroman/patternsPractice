@@ -4,10 +4,10 @@ namespace PatternMethod
 {
     public class Coffee : CaffeineBeverage
     {
-        public bool UserAnswer { get; set; }
+        private bool userAnswer;
         public Coffee(bool answer)
         {
-            UserAnswer = answer;
+            userAnswer = answer;
         }
         protected override void Brew()
         {
@@ -21,14 +21,7 @@ namespace PatternMethod
 
         protected override bool CustomerWantsCondiments()
         {
-            if (UserAnswer)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return userAnswer;
         }
     }
 }
