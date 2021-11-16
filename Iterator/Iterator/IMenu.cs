@@ -4,6 +4,6 @@ namespace Iterator
 {
     public interface IMenu
     {
-        public IIterator CreateIterator();
+        public IIterator<MenuItem> CreateIterator();
     }
 }

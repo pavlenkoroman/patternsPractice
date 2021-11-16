@@ -14,7 +14,7 @@ namespace Iterator
             this._dinerMenu = dinerMenu;
         }
 
-        private void PrintMenu(IIterator iterator)
+        private void PrintMenu(IIterator<MenuItem> iterator)
         {
             while (iterator.HasNext())
             {
@@ -26,8 +26,8 @@ namespace Iterator
 
         public void PrintMenu()
         {
-            IIterator pancakeIterator = _pancakeHouseMenu.CreateIterator();
-            IIterator dinerIterator = _dinerMenu.CreateIterator();
+            IIterator<MenuItem> pancakeIterator = _pancakeHouseMenu.CreateIterator();
+            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
 
             Console.WriteLine("------ PANCAKE MENU ------");
             PrintMenu(pancakeIterator);

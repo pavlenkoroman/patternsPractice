@@ -1,6 +1,6 @@
 ﻿namespace Iterator
 {
-    public class MenuItem
+    public class MenuItem : IMenuItem
     {
         public string Name { get; set; }
         public string Description { get; set; }

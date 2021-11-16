@@ -50,7 +50,7 @@ namespace Iterator
                 numberOfItems++;
             }
         }
-        public IIterator CreateIterator()
+        public IIterator<MenuItem> CreateIterator()
         {
             return new DinerMenuIterator(menuItems);
         }

@@ -2,10 +2,10 @@
 
 namespace Iterator.Iterator
 {
-    public interface IIterator
+    public interface IIterator<T> where T : IMenuItem
     {
         bool HasNext();
 
-        MenuItem Next();
+        T Next();
     }
 }

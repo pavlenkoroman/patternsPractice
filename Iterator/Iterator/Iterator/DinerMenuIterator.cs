@@ -2,7 +2,7 @@
 
 namespace Iterator.Iterator
 {
-    public class DinerMenuIterator : IIterator
+    public class DinerMenuIterator : IIterator<MenuItem>
     {
         private MenuItem[] items;
         private int position = 0;

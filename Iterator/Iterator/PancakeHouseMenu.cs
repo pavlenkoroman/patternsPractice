@@ -37,7 +37,7 @@ namespace Iterator
             var item = new MenuItem(name, desc, veg, price);
             menuItems.Add(item);
         }
-        public IIterator CreateIterator()
+        public IIterator<MenuItem> CreateIterator()
         {
             return new PancakeHouseMenuIterator(menuItems);
         }
