@@ -6,6 +6,6 @@ namespace Iterator.Iterator
     {
         bool HasNext();
 
-        Object Next();
+        MenuItem Next();
     }
 }

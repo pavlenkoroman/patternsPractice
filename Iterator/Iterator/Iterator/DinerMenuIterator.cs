@@ -23,9 +23,9 @@ namespace Iterator.Iterator
             }
         }
 
-        public object Next()
+        public MenuItem Next()
         {
-            MenuItem menuItem = items[position];
+            var menuItem = items[position];
             position++;
             return menuItem;
         }

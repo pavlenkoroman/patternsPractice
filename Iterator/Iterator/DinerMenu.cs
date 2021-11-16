@@ -11,6 +11,7 @@ namespace Iterator
 
         public DinerMenu()
         {
+            menuItems = new MenuItem[maxItems];
             AddItem(
                 "Vegeterian BLT",
                 "(Fakin') Bacon with lettuce & tomato on whole wheat. ",

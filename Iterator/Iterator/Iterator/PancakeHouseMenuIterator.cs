@@ -22,11 +22,11 @@ namespace Iterator.Iterator
             }
         }
 
-        public object Next()
+        public MenuItem Next()
         {
-            MenuItem item = menuItems[position];
+            var menuItem = menuItems[position];
             position++;
-            return item;
+            return menuItem;
         }
     }
 }

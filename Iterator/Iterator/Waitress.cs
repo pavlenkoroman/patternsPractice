@@ -32,7 +32,7 @@ namespace Iterator
             Console.WriteLine("------ PANCAKE MENU ------");
             PrintMenu(pancakeIterator);
 
-            Console.WriteLine("------ DINER MENU ------");
+            Console.WriteLine("\n------ DINER MENU ------");
             PrintMenu(dinerIterator);
         }
     }
